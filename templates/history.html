@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction History - Khinass</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="{{ url_for('static', filename='js/scripts.js') }}" defer></script>
+</head>
+<body>
+    <div class="sidebar">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Khinass Logo" class="logo">
+        <button onclick="navigate('index')"><i class="fas fa-shopping-cart"></i> Sales</button>
+        <button onclick="navigate('update_page')"><i class="fas fa-sync-alt"></i> Update</button>
+        <button onclick="navigate('history')" class="current-page"><i class="fas fa-history"></i> History</button>
+        <button onclick="navigate('add')"><i class="fas fa-plus-circle"></i> Add</button>
+    </div>
+    <div class="main-content">
+        <h1>Transaction History</h1>
+        <table id="historyTable">
+            <thead>
+                <tr>
+                    <th>Customer Name</th>
+                    <th>Date</th>
+                    <th>Payment Type</th>
+                    <th>Product Name</th>
+                    <th>Quantity</th>
+                    <th>Total Amount</th>
+                    <th>Profit</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+</body>
+</html>
